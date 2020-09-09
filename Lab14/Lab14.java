@@ -1,7 +1,9 @@
 package lab1.pkg4;
 
 import java.util.Scanner;
-
+/*Главный класс, из которого происходит запуск программы
+Пользователь вводит строку и делит ее по пробелу.
+Эта строка переводится в массив чисел. Создается экземпляр класса Numbers.*/
 public class Lab14 {
 
     public static void main(String[] args) {

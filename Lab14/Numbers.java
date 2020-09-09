@@ -1,5 +1,6 @@
 package lab1.pkg4;
-
+/*Класс Numbers с атрибутом args.
+Метод summ складывает числа введенные пользователем*/
 public class Numbers {
     int[] args;
     public Numbers(int[] args){
