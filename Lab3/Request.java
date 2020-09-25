@@ -107,25 +107,29 @@ public class Request {
     }
     //Пятое задание: перенести первые занятия заданных дней на последнее место
     public void replaceTable(String day) throws SQLException{
-        //SQL запрос, удаляющий из таблицы расписание все строки с указанным днем
+        //SQL запрос, удаляющий из таблицы расписание строку с указанным днем и минимальным ID
         String sql = "DELETE FROM schedule WHERE ID IN (SELECT MIN(ID) FROM schedule WHERE Day = '"+day+"')";
+        //SQL запрос, выбирающий из таблицы расписание строку с указанным днем и минимальным ID
         String sql1 = "SELECT * FROM schedule WHERE ID IN (SELECT MIN(ID) FROM schedule WHERE Day = '"+day+"')";
         ResultSet res = this.statement.executeQuery(sql1);
-        ArrayList<String> subs = new ArrayList<>();
+        ArrayList<String> arr = new ArrayList<>();
+        //Записываем в массив всю строку
         if (res.first()){
-            subs.add(String.valueOf(res.getInt("Teacher")));
-            subs.add(String.valueOf(res.getInt("Subject")));
-            subs.add(res.getString("Day"));
-            subs.add(String.valueOf(res.getInt("classroom")));
-            subs.add(String.valueOf(res.getInt("Quantity")));
+            arr.add(String.valueOf(res.getInt("Teacher")));
+            arr.add(String.valueOf(res.getInt("Subject")));
+            arr.add(res.getString("Day"));
+            arr.add(String.valueOf(res.getInt("classroom")));
+            arr.add(String.valueOf(res.getInt("Quantity")));
         }
+        //Удаление строки
         this.statement.executeUpdate(sql);
+        //Добавление новой строки с данными из массива
         String sql2 = "INSERT INTO schedule (Teacher, Subject, Day, classroom, Quantity) value ("
-                + Integer.parseInt(subs.get(0)) + ","
-                + Integer.parseInt(subs.get(1)) + ",'"
-                + subs.get(2) + "',"
-                + Integer.parseInt(subs.get(3)) + ","
-                + Integer.parseInt(subs.get(4)) + ")";
+                + Integer.parseInt(arr.get(0)) + ","
+                + Integer.parseInt(arr.get(1)) + ",'"
+                + arr.get(2) + "',"
+                + Integer.parseInt(arr.get(3)) + ","
+                + Integer.parseInt(arr.get(4)) + ")";
         this.statement.executeUpdate(sql2);
     }
 }
