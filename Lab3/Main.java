@@ -24,7 +24,7 @@ public class Main {
         else if (a == 4)
             request.numOfClassrooms(2);
         else if (a == 5)
-            request.replaceTable("Monday");
+            request.replaceTable("Sunday");
         else
             System.out.println("Неверное число");
     }

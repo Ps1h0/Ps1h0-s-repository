@@ -109,7 +109,6 @@ public class Request {
     public void replaceTable(String day) throws SQLException{
         //SQL запрос, удаляющий из таблицы расписание все строки с указанным днем
         String sql = "DELETE FROM schedule WHERE ID IN (SELECT MIN(ID) FROM schedule WHERE Day = '"+day+"')";
-        //ResultSet res = this.statement.executeQuery(sql);
         String sql1 = "SELECT * FROM schedule WHERE ID IN (SELECT MIN(ID) FROM schedule WHERE Day = '"+day+"')";
         ResultSet res = this.statement.executeQuery(sql1);
         ArrayList<String> subs = new ArrayList<>();
@@ -127,5 +126,6 @@ public class Request {
                 + subs.get(2) + "',"
                 + Integer.parseInt(subs.get(3)) + ","
                 + Integer.parseInt(subs.get(4)) + ")";
+        this.statement.executeUpdate(sql2);
     }
 }
