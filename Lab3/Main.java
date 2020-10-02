@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        com.company.Connector connector = new com.company.Connector("jdbc:mysql://localhost/kpo", "root", "");
+        Connector connector = new Connector("jdbc:mysql://localhost/kpo", "root", "");
         Statement statement = connector.connection();
         Request request = new Request(statement);
         Scanner scan = new Scanner(System.in);
