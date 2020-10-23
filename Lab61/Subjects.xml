@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjects>
+    <subject id = "1">
+        <name>Math</name>
+        <classroom>101</classroom>
+    </subject>
+    <subject id = "2">
+
+        <name>Music</name>
+        <classroom>102</classroom>
+    </subject>
+    <subject id = "3">
+        <name>Russian Language</name>
+        <classroom>103</classroom>
+    </subject>
+    <subject id = "4">
+        <name>Physical Education</name>
+        <classroom>222</classroom>
+    </subject>
+    <subject id = "5">
+        <name>English Language</name>
+        <classroom>232</classroom>
+    </subject>
+    <subject id = "6">
+        <name>History</name>
+        <classroom>244</classroom>
+    </subject>
+    <subject id = "7">
+        <name>Literature</name>
+        <classroom>265</classroom>
+    </subject>
+    <subject id = "8">
+        <name>Geography</name>
+        <classroom>468</classroom>
+    </subject>
+    <subject id = "9">
+        <name>Biology</name>
+        <classroom>457</classroom>
+    </subject>
+    <subject id = "10">
+        <name>Informatics</name>
+        <classroom>578</classroom>
+    </subject>
+    <subject id = "11">
+        <name>Physics</name>
+        <classroom>608</classroom>
+    </subject>
+    <subject id = "12">
+        <name>Chemistry</name>
+        <classroom>123</classroom>
+    </subject>
+    <subject id = "13">
+        <name>Economics</name>
+        <classroom>456</classroom>
+    </subject>
+    <subject id = "14">
+        <name>Philosophy</name>
+        <classroom>245</classroom>
+    </subject>
+</subjects>
