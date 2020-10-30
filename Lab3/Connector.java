@@ -13,7 +13,7 @@ public class Connector {
     private final String user;
     private final String pass;
 
-    public Connector(String dburl, String user, String pass){
+    public Connector(String dburl, String user, String pass) {
         this.dbUrl = dburl;
         this.user = user;
         this.pass = pass;

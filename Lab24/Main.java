@@ -17,7 +17,7 @@ public class Main {
         //Создание экземпляра класса Pattern
         Pattern r = Pattern.compile(pattern);
 
-        try{
+        try {
             bf = new BufferedReader(new FileReader(f));
             fw = new FileWriter(f1);
             String tmp;
@@ -25,18 +25,18 @@ public class Main {
             while ((tmp = bf.readLine()) != null) {
                 //Создание экземпляра класса Matcher
                 Matcher m = r.matcher(tmp);
-                if (m.find()){
+                if (m.find()) {
                     fw.write(m.group());
                 }
             }
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
-        }finally {
-          try{
-              fw.close();
-          } catch (IOException e) {
-              e.printStackTrace();
-          }
+        } finally {
+            try {
+                fw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
     }

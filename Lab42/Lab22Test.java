@@ -16,12 +16,12 @@ class Lab22Test {
         int b;
         String tmp = "";
         boolean x = true;
-        while ((b = fr.read()) !=-1){
-            if((char) b == ' '){
+        while ((b = fr.read()) != -1) {
+            if ((char) b == ' ') {
                 if (tmp.equals("public"))
                     x = false;
                 tmp = "";
-            }else if ((char) b == '\n'){
+            } else if ((char) b == '\n') {
                 tmp = "";
             } else
                 tmp += (char) b;
@@ -30,12 +30,12 @@ class Lab22Test {
     }
 
     @Test
-    void emptyFile() throws IOException{
+    void emptyFile() throws IOException {
         FileReader fr = new FileReader(Lab22.publicToPrivate("C:\\Users\\plato\\OneDrive\\Desktop\\empty.txt"));
         int b = 0;
         String tmp = "";
         boolean x = false;
-        if ((b = fr.read()) == -1){
+        if ((b = fr.read()) == -1) {
             x = true;
         }
         assertTrue(x);

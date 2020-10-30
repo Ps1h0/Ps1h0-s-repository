@@ -5,7 +5,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 /*Главный класс программы. Создаются экземпляры классов Connector, Statement, Request.
-* Пользователь выбирает какое из 5 заданий выполнить.*/
+ * Пользователь выбирает какое из 5 заданий выполнить.*/
 public class Main {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {

@@ -23,9 +23,9 @@ public class Main {
         Serializator sz = new Serializator();
         boolean b = sz.serialization(subject1, file);
         Subject res = null;
-        try{
+        try {
             res = sz.deserialization(file);
-        } catch (InvalidObjectException e){
+        } catch (InvalidObjectException e) {
             e.printStackTrace();
         }
         System.out.println("Объект полученный из файла с помощью десериализации: " + res);
@@ -34,12 +34,13 @@ public class Main {
         List<Subject> subjectsList = parseXMLfile(fileName);
         Serializator serializator = new Serializator();
         //Запись объектов в файл
-        for (int i = 0; i < subjectsList.size(); i++){
-            serializator.serialization(subjectsList.get(i),"res.txt");
+        for (int i = 0; i < subjectsList.size(); i++) {
+            serializator.serialization(subjectsList.get(i), "res.txt");
         }
     }
+
     //Метод, производящий парсинг XML документа в лист
-    private static List<Subject> parseXMLfile(String fileName){
+    private static List<Subject> parseXMLfile(String fileName) {
         List<Subject> subjectsList = new ArrayList<>();
         Subject subject = null;
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();

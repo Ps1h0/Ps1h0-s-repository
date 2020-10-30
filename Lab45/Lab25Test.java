@@ -6,21 +6,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Lab25Test {
     @Test
-    void isEmpty(){
+    void isEmpty() {
         String b = "";
         String a = Lab25.nums(b);
         assertEquals("", a);
     }
 
     @Test
-    void noNums(){
+    void noNums() {
         String b = "abcdffedhth";
         String a = Lab25.nums(b);
         assertEquals("", a);
     }
 
     @Test
-    void correctRes(){
+    void correctRes() {
         String b = "a1b12c123d1234";
         String a = Lab25.nums(b);
         assertEquals("1234", a);

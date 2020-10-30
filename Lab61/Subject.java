@@ -7,38 +7,38 @@ public class Subject implements Serializable {
     private String classroom;
     private int id;
 
-    public Subject(String name, String classroom, int id){
+    public Subject(String name, String classroom, int id) {
         this.name = name;
         this.classroom = classroom;
         this.id = id;
     }
 
-    public String getName (){
+    public String getName() {
         return name;
     }
 
-    public void setName (String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getClassroom (){
+    public String getClassroom() {
         return classroom;
     }
 
-    public void setClassroom (String classroom){
+    public void setClassroom(String classroom) {
         this.classroom = classroom;
     }
 
-    public int getId (){
+    public int getId() {
         return id;
     }
 
-    public void setId (int id){
+    public void setId(int id) {
         this.id = id;
     }
 
     @Override
-    public String toString(){
-        return "Subject [name = "+name+", classroom = "+classroom+", id = "+id+"]";
+    public String toString() {
+        return "Subject [name = " + name + ", classroom = " + classroom + ", id = " + id + "]";
     }
 }

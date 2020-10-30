@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /*Главный класс программы. Пользователем вводится строка. pattern - шаблон для поиска
-* numbers - рабочая строка для поиска самого длинного числа*/
+ * numbers - рабочая строка для поиска самого длинного числа*/
 public class Lab25 {
 
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Lab25 {
         System.out.println(nums(str));
     }
 
-    public static String nums(String a){
+    public static String nums(String a) {
         String pattern = "\\d+";
         String numbers = "";
 
@@ -27,7 +27,7 @@ public class Lab25 {
         /*Пока в строке str встречается подстрока, соответствующая шаблону pattern
         Сравниваем длину и ищем максимальную, которую записываем в numbers*/
         while (m.find()) {
-            if (a.substring(m.start(), m.end()).length() > numbers.length()){
+            if (a.substring(m.start(), m.end()).length() > numbers.length()) {
                 numbers = a.substring(m.start(), m.end());
             }
         }
